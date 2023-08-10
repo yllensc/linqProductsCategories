@@ -1,0 +1,17 @@
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/linqProducts
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/linqProducts.deps.json
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/linqProducts.runtimeconfig.json
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/linqProducts.dll
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/linqProducts.pdb
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.csproj.AssemblyReference.cache
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.GeneratedMSBuildEditorConfig.editorconfig
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.AssemblyInfoInputs.cache
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.AssemblyInfo.cs
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.csproj.CoreCompileInputs.cache
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.dll
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/refint/linqProducts.dll
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.pdb
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.genruntimeconfig.cache
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/ref/linqProducts.dll
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/obj/Debug/net7.0/linqProducts.csproj.CopyComplete

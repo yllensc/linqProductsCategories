@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "o0NOB/ZbIO/THcHzo162mcus52BqjYqSHB5Q5R/bcwVcUrmb5jA8+Nd2ZNf3iwPeQSCiEyzXxjcXn8EKYezU6A==",
+  "success": true,
+  "projectFilePath": "/home/arteN01-060/Documents/c#r3yllensantamaria/linQPractice/linqProducts/linqProducts.csproj",
+  "expectedPackageFiles": [
+    "/home/arteN01-060/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

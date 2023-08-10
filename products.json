@@ -1,0 +1,82 @@
+[
+  {
+    "CodeProduct": 1,
+    "NameProduct": "leche alquería",
+    "Stock": 20,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 3000.0,
+    "PriceBuy": 2000.0,
+    "IdCategory": 1
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "leche vaquita",
+    "Stock": 20,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 2500.0,
+    "PriceBuy": 2000.0,
+    "IdCategory": 1
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "olla super pro",
+    "Stock": 10,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 230000.0,
+    "PriceBuy": 200000.0,
+    "IdCategory": 2
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "cepillo cool",
+    "Stock": 50,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 6500.0,
+    "PriceBuy": 4000.0,
+    "IdCategory": 3
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "jabón de avena",
+    "Stock": 50,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 4500.0,
+    "PriceBuy": 3000.0,
+    "IdCategory": 3
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "gaseosa de sandía",
+    "Stock": 200,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 5000.0,
+    "PriceBuy": 4000.0,
+    "IdCategory": 4
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "smirnoff",
+    "Stock": 100,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 10000.0,
+    "PriceBuy": 4000.0,
+    "IdCategory": 5
+  },
+  {
+    "CodeProduct": 1,
+    "NameProduct": "lomo de cerdo",
+    "Stock": 50,
+    "StockMin": 0,
+    "StockMax": 0,
+    "PriceSell": 15000.0,
+    "PriceBuy": 12000.0,
+    "IdCategory": 7
+  }
+]
