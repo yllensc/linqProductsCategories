@@ -26,5 +26,9 @@
   {
     "IdCategory": 7,
     "Description": "carnes"
+  },
+  {
+    "IdCategory": 8,
+    "Description": "random"
   }
 ]

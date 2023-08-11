@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tQbOIxMbur5iseLX3/HIsti/0NbVObjtG31/4FtjpfLO0ScQMpuuOYAxm0FmPYiooHKqPOU8kAhf3e2vOj52ug==",
+  "dgSpecHash": "cWNLgxluHbY/xqiDSzzc4gf4Iw6X/7oBQbCWziFTypuMksQsoM4PigPOqnYwVXjSsz7Mtpe9qAaxCNwF2B8/IQ==",
   "success": true,
-  "projectFilePath": "D:\\DATOS DE USUARIO\\Documents\\Campus\\c#\\linqProductsCategories\\linqProducts.csproj",
+  "projectFilePath": "/home/apolt01-033/Documents/c#ysantamaria/linqProductsCategories/linqProducts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Usuario\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "/home/apolt01-033/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

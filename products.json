@@ -78,15 +78,5 @@
     "PriceSell": 15000.0,
     "PriceBuy": 12000.0,
     "IdCategory": 7
-  },
-  {
-    "CodeProduct": 4,
-    "NameProduct": "gancho de ropa",
-    "Stock": 20,
-    "StockMin": 10,
-    "StockMax": 2147483647,
-    "PriceSell": 2000.0,
-    "PriceBuy": 1200.0,
-    "IdCategory": 2
   }
 ]

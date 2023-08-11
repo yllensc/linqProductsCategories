@@ -1,6 +1,8 @@
 ﻿using System.Security.Cryptography.X509Certificates;
-using linqProducts.classes;
+using linqProducts.Entities
+;
 using linqProducts.Views;
+using linqProductsCategories.Entities;
 using Newtonsoft.Json;
 
 internal class Program{
@@ -27,19 +29,26 @@ internal class Program{
         new BCategories() {IdCategory = 7, Description = "carnes"},
     };
 
+    
+
     //instancia para métodos
     static BProducts productsMethods = new BProducts();
     static BCategories categoriesMethods = new BCategories();
-    static Env envMethods = new Env();
 
     public static void Main(string[] args){
 
-        //data json
-        envMethods.loadData(Env.FileCategory,listCategories);
-        envMethods.loadData(Env.FileProduct,listProducts);
-        JsonAdd(listProducts, Env.FileProduct);
-        JsonAdd(listCategories, Env.FileCategory);
+        Env.StoreProducts.ListProducts.AddRange(listProducts);
+        Env.StoreProducts.ListCategories.AddRange(listCategories);
 
+        //data json por aparte
+        Env.loadData(Env.FileCategory,listCategories);
+        Env.loadData(Env.FileProduct,listProducts);
+        Env.JsonAdd(listProducts, Env.FileProduct);
+        Env.JsonAdd(listCategories, Env.FileCategory);
+
+        //data json todo junto
+        Env.loadData(Env.FileStore);
+        Env.JsonAddStoreProducts(Env.FileStore);
         bool blContinue = true;
         int optionMain;
         do
@@ -59,7 +68,8 @@ internal class Program{
                     Console.ResetColor();
                     categoriesMethods.ShowCategories(listCategories);
                     productsMethods.AddProduct(listProducts,listCategories);
-                    JsonAdd(listProducts, Env.FileProduct);
+                    Env.JsonAdd(listProducts, Env.FileProduct);
+                    Env.JsonAddStoreProducts(Env.FileStore);
                     break;
                 case 2:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -68,7 +78,8 @@ internal class Program{
                     Console.ResetColor();
                     categoriesMethods.ShowCategories(listCategories);
                     categoriesMethods.AddCategory(listCategories);
-                    JsonAdd(listCategories, Env.FileCategory);
+                    Env.JsonAdd(listCategories, Env.FileCategory);
+                    Env.JsonAddStoreProducts(Env.FileStore);
                     break;
                 case 3:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -99,11 +110,11 @@ internal class Program{
             }
         } while (blContinue);
 
-        static void JsonAdd<T>(List<T> list, string fileName){
-    string jsonFile = JsonConvert.SerializeObject(list, Formatting.Indented);
-    File.WriteAllText(fileName, jsonFile);
+        
+
 }
+
+
 
 
     }
-}

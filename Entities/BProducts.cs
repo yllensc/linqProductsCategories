@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace linqProducts.classes
+namespace linqProducts.Entities
 {
     public class BProducts
     {
@@ -20,10 +20,6 @@ namespace linqProducts.classes
 
         public BProducts()
         {
-            if (!File.Exists(Env.FileProduct))
-            {
-                File.WriteAllText(Env.FileProduct, "");
-            }
         }
         public BProducts(int code, string nameProduct, int stock, double priceSell, double priceBuy, int category)
         {
@@ -44,11 +40,11 @@ namespace linqProducts.classes
             if (listProducts.Count > 0)
             {
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("\nID\t\tNombre\t\tStock");
+                Console.WriteLine("\n{0,-10}{1,30}{2,30}", "ID", "Nombre", "Stock");
                 Console.ResetColor();
                 foreach (var product in listProducts)
                 {
-                    Console.WriteLine("{0}\t\t{1}\t\t{2}", product.CodeProduct, product.NameProduct, product.Stock);
+                    Console.WriteLine("{0,-10}{1,30}{2,30}", product.CodeProduct, product.NameProduct, product.Stock);
                 }
 
             }
@@ -79,22 +75,23 @@ namespace linqProducts.classes
             try{
 
             Console.Write("Ingresa el código del producto: ");
-            int code = int.Parse(Console.ReadLine());
+            int code = int.Parse(Console.ReadLine()?? string.Empty);
 
             Console.Write("Ingresa el nombre del producto: ");
-            string nameProduct = Console.ReadLine();
+            string ? nameProduct = Console.ReadLine();
 
             Console.Write("Ingresa el stock del producto: ");
-            int stock = int.Parse(Console.ReadLine());
+            int stock = int.Parse(Console.ReadLine()?? string.Empty);
 
             Console.Write("Ingresa el precio de venta del producto: ");
-            double priceSell = double.Parse(Console.ReadLine());
+            double priceSell = double.Parse(Console.ReadLine()?? string.Empty);
 
             Console.Write("Ingresa el precio de compra del producto: ");
-            double priceBuy = double.Parse(Console.ReadLine());
+            double priceBuy = double.Parse(Console.ReadLine()?? string.Empty);
 
-            listProducts.Add(new BProducts(code, nameProduct, stock, priceSell, priceBuy, selectedCategoryId));
-
+            BProducts productNew = new BProducts(code, nameProduct, stock, priceSell, priceBuy, selectedCategoryId);
+            listProducts.Add(productNew);
+            Env.StoreProducts.ListProducts.Add(productNew);
             Console.WriteLine("Producto agregado exitosamente.");
             }
             catch (Exception ex)
@@ -122,13 +119,13 @@ namespace linqProducts.classes
                 Console.WriteLine($"Categoría: {group.CategoryDescription} (ID: {group.CategoryId})");
                 Console.ResetColor();
                 if(group.Products.Count > 0){
-                    Console.WriteLine("\n{0,-30}{1,-10}{2,-20}{3,-20}{4,-25}{5,-25}","Producto","Stock", "$ compra", "$ venta", "$ total compra", " $ total venta");
+                    Console.WriteLine("\n{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}","Producto","Stock", "$ compra", "$ venta", "$ total compra", " $ total venta");
                 foreach (var product in group.Products)
                 {
                     double totalBuyPrice = product.PriceBuy * product.Stock;
                     double totalSellPrice = product.PriceSell * product.Stock;
 
-                    Console.WriteLine("{0,-30}{1,-10}{2,-20}{3,-20}{4,-25}{5,-25}",product.NameProduct,product.Stock,product.PriceBuy,product.PriceSell,totalBuyPrice,totalSellPrice);
+                    Console.WriteLine("{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}",product.NameProduct,product.Stock,product.PriceBuy,product.PriceSell,totalBuyPrice,totalSellPrice);
                 }
 
                 Console.WriteLine();
