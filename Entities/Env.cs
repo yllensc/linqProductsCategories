@@ -11,14 +11,8 @@ namespace linqProducts.Entities
 {
     public static class Env
     {
-        private static string fileProduct = "products.json";
-        private static string fileCategory = "category.json";
         private static string fileStore = "tiendaCampus.json";
         private static StoreProducts storeProducts = new StoreProducts();
-
-        public static string FileProduct{ get{ return fileProduct; } set{ fileProduct = value; } }
-        public static string FileCategory{ get{ return fileCategory; } set{ fileCategory = value; } }
-
         //json con todo dentro:
         public static string FileStore{ get{ return fileStore; } set{ fileStore = value; } }
         public static StoreProducts StoreProducts{ get{ return storeProducts; } set{ storeProducts = value; } }
@@ -71,7 +65,6 @@ namespace linqProducts.Entities
     File.WriteAllText(fileName, jsonFile);
 
 }
-
        
     }
 }

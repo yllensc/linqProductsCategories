@@ -10,13 +10,13 @@ internal class Program{
     //listas
     static List<BProducts> listProducts = new List<BProducts>(){
         new BProducts() {CodeProduct = 1, NameProduct = "leche alquería", IdCategory = 1, PriceBuy = 2000, PriceSell = 3000, Stock = 20},
-        new BProducts() {CodeProduct = 1, NameProduct = "leche vaquita", IdCategory = 1, PriceBuy = 2000, PriceSell = 2500, Stock = 20},
-        new BProducts() {CodeProduct = 1, NameProduct = "olla super pro", IdCategory = 2, PriceBuy = 200000, PriceSell = 230000, Stock = 10},
-        new BProducts() {CodeProduct = 1, NameProduct = "cepillo cool", IdCategory = 3, PriceBuy = 4000, PriceSell = 6500, Stock = 50},
-        new BProducts() {CodeProduct = 1, NameProduct = "jabón de avena", IdCategory = 3, PriceBuy = 3000, PriceSell = 4500, Stock = 50},
-        new BProducts() {CodeProduct = 1, NameProduct = "gaseosa de sandía", IdCategory = 4, PriceBuy = 4000, PriceSell = 5000, Stock = 200},
-        new BProducts() {CodeProduct = 1, NameProduct = "smirnoff", IdCategory = 5, PriceBuy = 4000, PriceSell = 10000, Stock = 100},
-        new BProducts() {CodeProduct = 1, NameProduct = "lomo de cerdo", IdCategory = 7, PriceBuy = 12000, PriceSell = 15000, Stock = 50}
+        new BProducts() {CodeProduct = 2, NameProduct = "leche vaquita", IdCategory = 1, PriceBuy = 2000, PriceSell = 2500, Stock = 20},
+        new BProducts() {CodeProduct = 3, NameProduct = "olla super pro", IdCategory = 2, PriceBuy = 200000, PriceSell = 230000, Stock = 10},
+        new BProducts() {CodeProduct = 4, NameProduct = "cepillo cool", IdCategory = 3, PriceBuy = 4000, PriceSell = 6500, Stock = 50},
+        new BProducts() {CodeProduct = 5, NameProduct = "jabón de avena", IdCategory = 3, PriceBuy = 3000, PriceSell = 4500, Stock = 50},
+        new BProducts() {CodeProduct = 6, NameProduct = "gaseosa de sandía", IdCategory = 4, PriceBuy = 4000, PriceSell = 5000, Stock = 200},
+        new BProducts() {CodeProduct = 7, NameProduct = "smirnoff", IdCategory = 5, PriceBuy = 4000, PriceSell = 10000, Stock = 100},
+        new BProducts() {CodeProduct = 8, NameProduct = "lomo de cerdo", IdCategory = 7, PriceBuy = 12000, PriceSell = 15000, Stock = 50}
 
     };
     static List<BCategories> listCategories = new List<BCategories>(){
@@ -40,12 +40,6 @@ internal class Program{
         Env.StoreProducts.ListProducts.AddRange(listProducts);
         Env.StoreProducts.ListCategories.AddRange(listCategories);
 
-        //data json por aparte
-        Env.loadData(Env.FileCategory,listCategories);
-        Env.loadData(Env.FileProduct,listProducts);
-        Env.JsonAdd(listProducts, Env.FileProduct);
-        Env.JsonAdd(listCategories, Env.FileCategory);
-
         //data json todo junto
         Env.loadData(Env.FileStore);
         Env.JsonAddStoreProducts(Env.FileStore);
@@ -68,7 +62,6 @@ internal class Program{
                     Console.ResetColor();
                     categoriesMethods.ShowCategories(listCategories);
                     productsMethods.AddProduct(listProducts,listCategories);
-                    Env.JsonAdd(listProducts, Env.FileProduct);
                     Env.JsonAddStoreProducts(Env.FileStore);
                     break;
                 case 2:
@@ -78,7 +71,6 @@ internal class Program{
                     Console.ResetColor();
                     categoriesMethods.ShowCategories(listCategories);
                     categoriesMethods.AddCategory(listCategories);
-                    Env.JsonAdd(listCategories, Env.FileCategory);
                     Env.JsonAddStoreProducts(Env.FileStore);
                     break;
                 case 3:
@@ -109,12 +101,5 @@ internal class Program{
                     break;
             }
         } while (blContinue);
-
-        
-
 }
-
-
-
-
     }

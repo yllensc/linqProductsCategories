@@ -42,19 +42,23 @@ namespace linqProducts.Entities
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("\n{0,-10}{1,30}{2,30}", "ID", "Nombre", "Stock");
                 Console.ResetColor();
-                foreach (var product in listProducts)
-                {
-                    Console.WriteLine("{0,-10}{1,30}{2,30}", product.CodeProduct, product.NameProduct, product.Stock);
-                }
 
+                var formattedProducts = listProducts
+                    .Select(product => $"{product.CodeProduct,-10}{product.NameProduct,30}{product.Stock,30}");
+
+                foreach (var formattedProduct in formattedProducts)
+                {
+                    Console.WriteLine(formattedProduct);
+                }
             }
             else
             {
-                Console.WriteLine("SOrry, no tenemos productos aún");
+                Console.WriteLine("Sorry, no tenemos productos aún");
             }
-            Console.ReadKey();
 
+            Console.ReadKey();
         }
+
 
         public void AddProduct(IList<BProducts> listProducts, IList<BCategories> listCategories)
         {
@@ -72,27 +76,37 @@ namespace linqProducts.Entities
                     break;
                 }
             } while (true);
-            try{
+            try
+            {
 
-            Console.Write("Ingresa el código del producto: ");
-            int code = int.Parse(Console.ReadLine()?? string.Empty);
+                Console.Write("Ingresa el código del producto: ");
+                int code;
+                
+                if (!int.TryParse(Console.ReadLine(), out code) ||
+                    listProducts.Any(product => product.CodeProduct == code))
+                {
+                    Console.WriteLine("Código inválido.");
+                }
+                else
+                {
 
-            Console.Write("Ingresa el nombre del producto: ");
-            string ? nameProduct = Console.ReadLine();
+                Console.Write("Ingresa el nombre del producto: ");
+                string? nameProduct = Console.ReadLine();
 
-            Console.Write("Ingresa el stock del producto: ");
-            int stock = int.Parse(Console.ReadLine()?? string.Empty);
+                Console.Write("Ingresa el stock del producto: ");
+                int stock = int.Parse(Console.ReadLine() ?? string.Empty);
 
-            Console.Write("Ingresa el precio de venta del producto: ");
-            double priceSell = double.Parse(Console.ReadLine()?? string.Empty);
+                Console.Write("Ingresa el precio de venta del producto: ");
+                double priceSell = double.Parse(Console.ReadLine() ?? string.Empty);
 
-            Console.Write("Ingresa el precio de compra del producto: ");
-            double priceBuy = double.Parse(Console.ReadLine()?? string.Empty);
+                Console.Write("Ingresa el precio de compra del producto: ");
+                double priceBuy = double.Parse(Console.ReadLine() ?? string.Empty);
 
-            BProducts productNew = new BProducts(code, nameProduct, stock, priceSell, priceBuy, selectedCategoryId);
-            listProducts.Add(productNew);
-            Env.StoreProducts.ListProducts.Add(productNew);
-            Console.WriteLine("Producto agregado exitosamente.");
+                BProducts productNew = new BProducts(code, nameProduct, stock, priceSell, priceBuy, selectedCategoryId);
+                listProducts.Add(productNew);
+                Env.StoreProducts.ListProducts.Add(productNew);
+                Console.WriteLine("Producto agregado exitosamente.");
+            }
             }
             catch (Exception ex)
             {
@@ -118,17 +132,18 @@ namespace linqProducts.Entities
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.WriteLine($"Categoría: {group.CategoryDescription} (ID: {group.CategoryId})");
                 Console.ResetColor();
-                if(group.Products.Count > 0){
-                    Console.WriteLine("\n{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}","Producto","Stock", "$ compra", "$ venta", "$ total compra", " $ total venta");
-                foreach (var product in group.Products)
+                if (group.Products.Count > 0)
                 {
-                    double totalBuyPrice = product.PriceBuy * product.Stock;
-                    double totalSellPrice = product.PriceSell * product.Stock;
+                    Console.WriteLine("\n{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}", "Producto", "Stock", "$ compra", "$ venta", "$ total compra", " $ total venta");
+                    foreach (var product in group.Products)
+                    {
+                        double totalBuyPrice = product.PriceBuy * product.Stock;
+                        double totalSellPrice = product.PriceSell * product.Stock;
 
-                    Console.WriteLine("{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}",product.NameProduct,product.Stock,product.PriceBuy,product.PriceSell,totalBuyPrice,totalSellPrice);
-                }
+                        Console.WriteLine("{0,-30}{1,-10}{2,-20}{3,-20}{4,-30}{5,-30}", product.NameProduct, product.Stock, product.PriceBuy, product.PriceSell, totalBuyPrice, totalSellPrice);
+                    }
 
-                Console.WriteLine();
+                    Console.WriteLine();
                 }
             }
 

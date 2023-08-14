@@ -49,3 +49,20 @@ D:/DATOS DE USUARIO/Documents/Campus/c#/linqProductsCategories/obj/Debug/net7.0/
 /home/apolt01-033/Documents/c#ysantamaria/linqProductsCategories/obj/Debug/net7.0/linqProducts.pdb
 /home/apolt01-033/Documents/c#ysantamaria/linqProductsCategories/obj/Debug/net7.0/linqProducts.genruntimeconfig.cache
 /home/apolt01-033/Documents/c#ysantamaria/linqProductsCategories/obj/Debug/net7.0/ref/linqProducts.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\linqProducts.exe
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\linqProducts.deps.json
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\linqProducts.runtimeconfig.json
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\linqProducts.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\linqProducts.pdb
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.csproj.AssemblyReference.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.AssemblyInfoInputs.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.AssemblyInfo.cs
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.csproj.CoreCompileInputs.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.csproj.CopyComplete
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\refint\linqProducts.dll
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.pdb
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\linqProducts.genruntimeconfig.cache
+D:\DATOS DE USUARIO\Documents\Campus\c#\linqProductsCategories\obj\Debug\net7.0\ref\linqProducts.dll

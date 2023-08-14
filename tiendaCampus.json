@@ -30,7 +30,7 @@
     },
     {
       "IdCategory": 8,
-      "Description": "random"
+      "Description": "cositas"
     }
   ],
   "ListProducts": [
@@ -45,7 +45,7 @@
       "IdCategory": 1
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 2,
       "NameProduct": "leche vaquita",
       "Stock": 20,
       "StockMin": 0,
@@ -55,7 +55,7 @@
       "IdCategory": 1
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 3,
       "NameProduct": "olla super pro",
       "Stock": 10,
       "StockMin": 0,
@@ -65,7 +65,7 @@
       "IdCategory": 2
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 4,
       "NameProduct": "cepillo cool",
       "Stock": 50,
       "StockMin": 0,
@@ -75,7 +75,7 @@
       "IdCategory": 3
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 5,
       "NameProduct": "jabón de avena",
       "Stock": 50,
       "StockMin": 0,
@@ -85,7 +85,7 @@
       "IdCategory": 3
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 6,
       "NameProduct": "gaseosa de sandía",
       "Stock": 200,
       "StockMin": 0,
@@ -95,7 +95,7 @@
       "IdCategory": 4
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 7,
       "NameProduct": "smirnoff",
       "Stock": 100,
       "StockMin": 0,
@@ -105,7 +105,7 @@
       "IdCategory": 5
     },
     {
-      "CodeProduct": 1,
+      "CodeProduct": 8,
       "NameProduct": "lomo de cerdo",
       "Stock": 50,
       "StockMin": 0,
@@ -115,24 +115,24 @@
       "IdCategory": 7
     },
     {
-      "CodeProduct": 22,
-      "NameProduct": "yogurth",
-      "Stock": 12,
+      "CodeProduct": 9,
+      "NameProduct": "pollo",
+      "Stock": 40,
       "StockMin": 10,
       "StockMax": 2147483647,
-      "PriceSell": 2000.0,
-      "PriceBuy": 1500.0,
-      "IdCategory": 1
+      "PriceSell": 12000.0,
+      "PriceBuy": 10000.0,
+      "IdCategory": 7
     },
     {
-      "CodeProduct": 234,
-      "NameProduct": "silla",
-      "Stock": 32,
+      "CodeProduct": 10,
+      "NameProduct": "aretes",
+      "Stock": 40,
       "StockMin": 10,
       "StockMax": 2147483647,
-      "PriceSell": 50000.0,
-      "PriceBuy": 40000.0,
-      "IdCategory": 2
+      "PriceSell": 15000.0,
+      "PriceBuy": 12000.0,
+      "IdCategory": 8
     }
   ]
 }
